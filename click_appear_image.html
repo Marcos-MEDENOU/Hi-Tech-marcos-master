@@ -38,6 +38,80 @@
         .border_img{
             border: 3px solid black;
         }
+        /*Modal Script*/
+
+             /*Connexion*/
+   
+      .modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 99999;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+      }
+    
+      .modalDialog > div {
+        width: 96vw;
+        height: 93vh;
+        position: relative;
+        /* margin: 5% auto; */
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        padding: 0;
+        margin: 2rem;
+        background-color: white;
+      }
+      .close {
+        background: #606061;
+        color: #ffffff;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+      }
+      .close:hover {
+        background: #6ed1d8;
+      }
+
+      #openModal div div.images_block_moddal{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+      }
+      /* #openModal{
+        display: none;
+      } */
+      #container_modal{
+        display: flex;
+       flex-direction: column;
+
+      }
+
+     /* .modalDialog>div{
+        display: flex;
+     }
+     .modalDialog div div.images div{
+        display: flex;
+     } */
+        /*End modal script*/
     </style>
 </head>
 <body>
@@ -53,7 +127,38 @@
             <img width="60px"  padding="0.7rem" src="product-1/slide-4-md.jpg" alt="">
             <img width="60px"  padding="0.7rem" src="product-1/slide-5-md.jpg" alt="">
         </div>
-       
+    </div>
+
+    <div class="select">
+        <a>
+            <svg width="2rem" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+            Mon compte
+        </a>
+    </div>
+   
+    <div id="openModal" class="modalDialog">
+      
+        <div>   
+            <a href="#close" title="Close" class="close" id="close1">X</a>
+            <div class="images_block_moddal">               
+                <div class="images_zone">
+                        <img width="60px" padding="0.7rem" src="product-1/slide-1-md.jpg" alt="">
+                        <img width="60px"  padding="0.7rem" src="product-1/slide-2-md.jpg" alt="">
+                        <img width="60px"  padding="0.7rem" src="product-1/slide-3-md.jpg" alt="">
+                        <img width="60px"  padding="0.7rem" src="product-1/slide-4-md.jpg" alt="">
+                        <img width="60px"  padding="0.7rem" src="product-1/slide-5-md.jpg" alt="">
+                </div>                  
+                <div id="container_modal">
+                        <img width="750px" height="750px" src="product-1/slide-1-lg.jpg" alt="">
+                </div>
+             
+            </div>
+
+        </div>
     </div>
 
     <script>
@@ -69,6 +174,42 @@
                 // element.classList.add("border_img");
             })
         });
+
+        /*Script largest modal*/
+
+        let select=document.querySelector("body>div")
+        console.log(select);
+        let connexionAccess = document.querySelector("#openModal form fieldset:nth-child(2) a")
+        let linkConnexionToModal2 = document.querySelector("a[href='#openModal2']")
+        let div1=document.getElementById("openModal")
+
+        let modalDialog2=document.querySelector("modalDialog2")
+        let redirect_connexion=document.querySelector("#redirect_connexion")
+        let close1=document.querySelector("#close1")
+        console.log(connexionAccess);
+        console.log(div1);
+
+        // select.addEventListener("click", function(e){
+        //     e.preventDefault();
+        //    div1.style.display="block";
+        // })
+        // connexionAccess.addEventListener("click", function(e){
+        //     e.preventDefault();
+        //     div1.style.display="none";
+
+        // })
+
+        // redirect_connexion.addEventListener("click", function(e){
+        //     e.preventDefault();
+
+        //     div1.style.display="block";
+        // })
+
+        // close1.addEventListener("click", function(e){
+        //     div1.style.display="none";
+
+        // })
+
     </script>
 </body>
 </html>
