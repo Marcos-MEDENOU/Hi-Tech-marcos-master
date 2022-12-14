@@ -1,0 +1,146 @@
+.container {
+    width: 100%;
+    max-width: 1140px;
+}
+
+:root {
+    /* font size and font height */
+    --fs-default-text-size: 1.5rem;
+    --fs-text-size-of-titles-1: 3.6rem;
+    --fs-title-text-size-2: 2.4rem;
+    --fs-text-size-of-headings-3: 1.8rem;
+    --lh-line-height: 2.0rem;
+
+    /* Color */
+    --clr-default-page-color: #eee;
+    --clr-gray-element-color: #eee;
+    --clr-header-background-color: #0c6588;
+    --clr-menu-background: #e2f7ff;
+    --clr-main-content-background: #fff;
+    --clr-footer-background-color: #333;
+    --clr-titles-color: #333;
+    --clr-text-color: #555;
+    --clr-header-text: #e2f7ff;
+    --clr-footer-text: #ddd;
+    --clr-links-and-buttons: #0c6588;
+    --clr-hover-links-and-buttons: #000;
+    --clr-footer-links: #eee;
+
+    /*Border*/
+    --bd-sm: 1px solid #eee;
+    --bd-md: 1px solid #ddd;
+    --bd-lg: 2px solid #ccc;
+
+    /*Shadow effect*/
+    --sd-sm: 0 0 1px rgba(0, 0, 0, 0.2);
+    --sd-md: 0 0 3px rgba(0, 0, 0, 0.3);
+    --sd-lg: 0 0 5px rgba(0, 0, 0, 0.4);
+    --sd-xl: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    /*Dark theme*/
+
+    --clr-dt-page-background: #222;
+    --clr-dt-gray-elements-background: #444;
+    --clr-dt-menu-background: #0c6588;
+    --clr-dt-main-content-background-main: #333;
+    --clr-dt-footer-background-footer: #333;
+    --clr-dt-titles-colors: #fff;
+    --clr-dt-text-color: #ddd;
+    --clr-dt-color-links-and-buttons: #e2f7ff;
+    --clr-dt-hover-links-and-buttons: #fff;
+    --bd-dt-sm-border: 1px solid #666;
+    --bd-dt-md-border: 1px solid #555;
+    --bd-dt-lg-border: 2px solid #444;
+    --fs-dt-default-text-size: 1.6rem;
+    --lh-dt-line-height: 3.0rem
+}
+
+/*********utilities css*/
+a {
+    text-decoration: none;
+    color: var(--clr-links-and-buttons);
+}
+
+/**************************/
+
+
+
+
+
+
+
+
+/*********Generality css*/
+
+/**************************/
+
+/*header css*/
+
+.accessibilty {
+    background-color: var(--clr-menu-background);
+    padding: 0.5rem;
+}
+
+.accessibilty>span {
+    display: block;
+    text-align: center;
+    padding-bottom: 0.7rem;
+}
+
+.header_page {
+    background-image: url("../../../public/ressources/images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_page img {
+    width: 5rem;
+}
+
+.header_page div:nth-child(2) {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+}
+
+.shop_list {
+    list-style: none;
+}
+
+.shop_list .shop-title {
+    color: var(--clr-links-and-buttons);
+}
+
+.shop_list ul {
+    list-style: none;
+}
+
+.shop_list ul>li {
+    margin-bottom: 0.5rem;
+}
+
+.shop_list div.scroll_menu_shop {
+    display: none;
+    margin-block: 0.5rem;
+}
+
+.shop_list div.scroll_menu_shop>ul ul {
+    padding: 0;
+
+}
+
+.shop_shelf~ul {
+    margin-block: 0.5rem;
+
+}
+
+.shop_list div.scroll_menu_shop>ul >li> .shop_shelf {
+margin-block: 0.5rem;
+
+}
+
+/*end header css*/

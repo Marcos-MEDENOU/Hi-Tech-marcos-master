@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click_appear</title>
+    <style>
+        p{
+            text-align: center;
+            margin: 25px;
+        }
+        div.images{
+            height: 50px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 450px;
+        }
+        div.images div{
+            display: flex;
+            gap: 40px;
+        }
+        .container{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .container img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .container img:hover{
+            background-color: green;
+        }
+        .border_img{
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="">
+    </div>
+    <p>Photos non contractuelles</p>
+    <div class="images">
+        <div>
+            <img width="60px" padding="0.7rem" src="product-1/slide-1-md.jpg" alt="">
+            <img width="60px"  padding="0.7rem" src="product-1/slide-2-md.jpg" alt="">
+            <img width="60px"  padding="0.7rem" src="product-1/slide-3-md.jpg" alt="">
+            <img width="60px"  padding="0.7rem" src="product-1/slide-4-md.jpg" alt="">
+            <img width="60px"  padding="0.7rem" src="product-1/slide-5-md.jpg" alt="">
+        </div>
+       
+    </div>
+
+    <script>
+        let tab=["product-1/slide-1-lg.jpg","product-1/slide-2-lg.jpg","product-1/slide-3-lg.jpg","product-1/slide-4-lg.jpg","product-1/slide-5-lg.jpg"]
+        let container=document.querySelector(".container>img");
+        console.log(container);
+        let images_block=document.querySelectorAll(".images img");
+        images_block.forEach( function(element,index){
+            element.addEventListener("click", function(e){
+                e.preventDefault();
+                container.setAttribute("src", tab[index]);
+                element.style.padding="10px";
+                // element.classList.add("border_img");
+            })
+        });
+    </script>
+</body>
+</html>
